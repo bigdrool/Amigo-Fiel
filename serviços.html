@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serviços - Amigo Fiel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #00bcd4;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .navbar-brand img {
+      margin-right: 10px;
+    }
+
+    .nav-link {
+      color: #ffffff;
+      font-weight: 500;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #ff5722;
+      transform: scale(1.1);
+    }
+
+    /* Hero Section */
+    .hero {
+      background-image: url('Imagens/pngwing.com.png');
+      background-size: cover;
+      background-position: center 20%;
+      min-height: 90vh;
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-top: 10px;
+      margin-bottom: 25px;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Section de Serviços */
+    #servicos {
+      padding: 50px 0;
+      background-color: #f4f4f4;
+    }
+
+    #servicos h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      color: #00bcd4;
+      font-weight: bold;
+    }
+
+    #servicos p {
+      font-size: 1.2rem;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    #servicos .card {
+      margin-top: 30px;
+      border: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    #servicos .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-agendar {
+      background-color: #00bcd4;
+      color: white;
+      font-weight: 500;
+      border: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-agendar:hover {
+      background-color: #0097a7;
+      transform: scale(1.05);
+    }
+
+    .btn-voltar {
+      background-color: #ff5722;
+      color: white;
+      font-weight: 500;
+      border: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-voltar:hover {
+      background-color: #e64a19;
+      transform: scale(1.05);
+    }
+
+    /* Botão fixo Voltar ao Início */
+    .btn-voltar-fixa {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #00bcd4;
+      color: white;
+      font-weight: 500;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 50px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      z-index: 1000;
+      text-decoration: none;
+    }
+
+    .btn-voltar-fixa:hover {
+      background-color: #0097a7;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#inicio">
+        <img src="Imagens/Petshop-removebg-preview.png" alt="Logo Amigo Fiel" width="80" height="80">
+        <span>Amigo Fiel</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="hero">
+    <div class="container hero-content text-dark">
+      <h1>Serviços Para o Seu Pet</h1>
+      <p>Com carinho e dedicação, oferecemos o melhor para o seu melhor amigo!</p>
+      <p><strong>Confira nossos serviços abaixo e escolha o que seu pet precisa.</strong></p>
+    </div>
+  </section>
+
+  <!-- Serviços Section -->
+  <section id="servicos">
+    <h2>Serviços Especializados</h2>
+    <p>Na Amigo Fiel, oferecemos uma gama completa de serviços para atender seu pet com o máximo de cuidado e carinho.</p>
+
+    <div class="container">
+      <div class="row">
+        <!-- Serviço 1 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="Imagens/ae19c93c343b76aedf8fb7af67180b1a.jpg" class="card-img-top" alt="Banho e Tosa">
+            <div class="card-body text-center">
+              <h5 class="card-title">Banho e Tosa</h5>
+              <p class="card-text">Higienização completa e cuidados para deixar seu pet sempre confortável e limpo.</p>
+              <a href="#" class="btn btn-agendar">Agendar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Serviço 2 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="Imagens/download.jpeg" class="card-img-top" alt="Consulta Veterinária">
+            <div class="card-body text-center">
+              <h5 class="card-title">Consulta Veterinária</h5>
+              <p class="card-text">Consultas médicas para garantir a saúde do seu pet com nossos profissionais especializados.</p>
+              <a href="#" class="btn btn-agendar">Agendar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Serviço 3 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="Imagens/reacao-de-vacina-em-cachorro-2-1.jpg" class="card-img-top" alt="Vacinação">
+            <div class="card-body text-center">
+              <h5 class="card-title">Vacinação</h5>
+              <p class="card-text">Mantenha seu pet protegido contra doenças com nossa aplicação de vacinas atualizadas.</p>
+              <a href="#" class="btn btn-agendar">Agendar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Serviço 4 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="Imagens/download (1).jpeg" class="card-img-top" alt="Passeio">
+            <div class="card-body text-center">
+              <h5 class="card-title">Passeio</h5>
+              <p class="card-text">Leve seu pet para passeios ao ar livre e garanta momentos de diversão e exercício.</p>
+              <a href="#" class="btn btn-agendar">Agendar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Serviço 5 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="Imagens/download (2).jpeg" class="card-img-top" alt="Castração">
+            <div class="card-body text-center">
+              <h5 class="card-title">Castração</h5>
+              <p class="card-text">Procedimento seguro para controle de natalidade e prevenção de doenças.</p>
+              <a href="#" class="btn btn-agendar">Agendar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Serviço 6 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="Imagens/images.jpeg" class="card-img-top" alt="Consulta Odontológica">
+            <div class="card-body text-center">
+              <h5 class="card-title">Consulta Odontológica</h5>
+              <p class="card-text">Cuide da saúde bucal do seu pet com consultas especializadas e limpeza dental.</p>
+              <a href="#" class="btn btn-agendar">Agendar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3" id="contato">
+    <p>&copy; 2025 Amigo Fiel - Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Botão fixo de voltar -->
+  <a href="index.html" class="btn-voltar-fixa" title="Voltar ao Início">⬅ Voltar</a>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
